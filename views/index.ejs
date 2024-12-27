@@ -6,21 +6,16 @@
     <section class="content recent-posts">
         <h2>Recent Posts</h2>
         <div class="posts">
-            <article class="post">
-                <h3>Post Title 1</h3>
-                <p>A short description of the blog post goes here...</p>
-                <a href="/post1">Read more</a>
-            </article>
-            <article class="post">
-                <h3>Post Title 2</h3>
-                <p>A short description of the blog post goes here...</p>
-                <a href="/post2">Read more</a>
-            </article>
-            <article class="post">
-                <h3>Post Title 3</h3>
-                <p>A short description of the blog post goes here...</p>
-                <a href="/post3">Read more</a>
-            </article>
+            <% for(let i = 0; i < 3; i++) { %>
+                <% if(i < blogs.length) { %> 
+                    <article class="post">
+                        <h3><%= blogs[i].title %></h3>
+                        <p><%= blogs[i].description %></p>
+                        <a href="/post1">Read more</a>
+                    </article>
+                <% } %>
+            <% } %>
+            
         </div>
     </section>
     <%- include("./partials/footer") %>

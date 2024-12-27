@@ -2,16 +2,17 @@
 const express = require("express")
 const mongoose = require('mongoose');
 const Blog = require('./models/blog');
+require('dotenv').config()
 
 //Initialize app
 const app = express()
 app.set('view engine', 'ejs')
 
 //Connect to MongoDB
-const dbURI = "mongodb+srv://Jiatao7:ZZtZX1LJLu4Xh5ou@cluster0.9ulw8.mongodb.net/new-blog-website?retryWrites=true&w=majority&appName=Cluster0";
+const dbURI = process.env.dbURI;
 
 mongoose.connect(dbURI)
-  .then(result => app.listen(3000))
+  .then(result => app.listen(process.env.PORT))
   .catch(err => console.log(err));
 
 //Middleware
@@ -23,15 +24,32 @@ app.use((req, res, next) => {
 
 //Routing
 app.get("/", (req, res) => {
-    res.render('index')
+    Blog.find().sort({createdAt: -1})
+    .then(result => res.render('index', {blogs: result}))
 })
 
 app.get("/blogs", (req, res) => {
-    res.render('blogs')
+    Blog.find().sort({createdAt: -1})
+        .then(result => res.render('blogs', {blogs: result}))
 })
 
 app.get("/create", (req, res) => {
     res.render('create')
+    /*
+    const blog = new Blog({
+        title: 'new blog',
+        description: 'about my new blog',
+        body: 'more about my new blog'
+    })
+    
+    blog.save()
+    .then(result => {
+        res.send(result);
+    })
+    .catch(err => {
+        console.log(err);
+    });
+    */
 })
 
 app.get("/about", (req, res) => {
