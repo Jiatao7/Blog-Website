@@ -7,11 +7,13 @@
 
 body {
     background-color: #f9f9f9;
+    min-height: 100vh;
 }
 
 .content {
     margin: 40px;
     padding: 20px;
+    min-height: calc(100vh - 77px - 56px - 80px);      /* 77px for navbar height, 56px for footer height, 80px for content top and bottom margins */
 }
 
 .content h2 {
@@ -38,13 +40,13 @@ body {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.post h3 {
+.post h3, .post-details h3 {
     font-size: 22px;
     color: #333;
     margin-bottom: 15px;
 }
 
-.post p {
+.post p, .post-details p {
     font-size: 18px; 
     color: #666;
     margin-bottom: 20px;
@@ -197,8 +199,6 @@ form button:hover {
     background-color: #333;
     color: #fff;
     font-size: 14px;
-    position: fixed;
-    bottom: 0;
     width: 100%;
 }
 

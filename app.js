@@ -34,6 +34,13 @@ app.get("/blogs", (req, res) => {
         .then(result => res.render('blogs', {blogs: result}))
 })
 
+app.get("/blogs/:id", (req, res) => {
+    const blogID = req.params.id;
+    Blog.findById(blogID)
+        .then(result => res.render("details", result))
+    
+})
+
 app.get("/create", (req, res) => {
     res.render('create')
     /*

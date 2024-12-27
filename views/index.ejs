@@ -11,11 +11,10 @@
                     <article class="post">
                         <h3><%= blogs[i].title %></h3>
                         <p><%= blogs[i].description %></p>
-                        <a href="/post1">Read more</a>
+                        <a href=<%= `blogs/${blogs[i].id}` %>>Read more</a>
                     </article>
                 <% } %>
             <% } %>
-            
         </div>
     </section>
     <%- include("./partials/footer") %>
