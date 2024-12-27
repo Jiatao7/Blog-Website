@@ -67,6 +67,7 @@ body {
 }
 
 
+
 /* About Us Page */
 .content.about-us p {
     font-size: 18px;
@@ -87,10 +88,11 @@ body {
     color: #fff;
 }
 
-.navbar .title {
+.navbar .title a {
     font-size: 24px;
     color: #fff;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 .navbar ul {
@@ -108,7 +110,7 @@ body {
     transition: color 0.3s;
 }
 
-.navbar ul li a:hover {
+.navbar ul li a:hover, .navbar .title a:hover {
     color: #00bcd4;
 }
 
