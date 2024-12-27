@@ -5,6 +5,15 @@
     <%- include("./partials/navbar") %>
     <section class="content">
         <h2>Create</h2>
+        <form>
+            <label for="title">Blog title:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="description">Blog description:</label>
+            <input type="text" id="description" name="description" required>
+            <label for="body">Blog body:</label>
+            <textarea id="body" name="body" required></textarea>
+            <button>Submit</button>
+        </form>
     </section>
     <%- include("./partials/footer") %>
 </body>
