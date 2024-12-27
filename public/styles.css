@@ -92,6 +92,12 @@ body {
     color: #0056b3;
 }
 
+.no-blogs-message {
+    margin: 40px;
+    font-size: 18px;
+    text-align: center;
+}
+
 /* Blog details page */
 .button-div {
     display: flex;

@@ -6,14 +6,18 @@
     <section class="content recent-posts">
         <h2>Recent Posts</h2>
         <div class="posts">
-            <% for(let i = 0; i < 3; i++) { %>
-                <% if(i < blogs.length) { %> 
-                    <article class="post">
-                        <h3><%= blogs[i].title %></h3>
-                        <p><%= blogs[i].description %></p>
-                        <a href=<%= `blogs/${blogs[i].id}` %>>Read more</a>
-                    </article>
+            <% if (blogs.length > 0) { %>
+                <% for(let i = 0; i < 3; i++) { %>
+                    <% if(i < blogs.length) { %> 
+                        <article class="post">
+                            <h3><%= blogs[i].title %></h3>
+                            <p><%= blogs[i].description %></p>
+                            <a href=<%= `blogs/${blogs[i].id}` %>>Read more</a>
+                        </article>
+                    <% } %>
                 <% } %>
+            <% } else { %>
+                <p class="no-blogs-message">No blogs yet</p>
             <% } %>
         </div>
     </section>
