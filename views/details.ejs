@@ -7,7 +7,24 @@
         <h2 class="title"><%= title %></h2>
         <h3 class="description"><%= description %></h3>
         <p class="body"><%= body %></p>
+        <div class="button-div">
+            <a class="delete-button" data-id=<%= _id %>>Delete</a>
+        </div>
     </section>
     <%- include("./partials/footer") %>
+
+    
+     <script>
+        //Delete blog
+        const deleteButton = document.querySelector(".delete-button")
+
+        deleteButton.addEventListener("click", (e) => {
+            const endpoint = `/blogs/${deleteButton.dataset.id}`
+            console.log(endpoint)
+            fetch(endpoint, {method: "DELETE"})     
+                .then(result =>  window.location.href = "/blogs")
+                .catch(err => console.log(err));
+        })
+     </script>
 </body>
 </html>

@@ -92,9 +92,35 @@ body {
     color: #0056b3;
 }
 
+/* Blog details page */
+.button-div {
+    display: flex;
+    justify-content: right;
+}
+
+.delete-button {
+    padding: 10px 20px;
+    background-color: #dc3545; /* Red background for danger */
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.delete-button:hover {
+    background-color: #c82333; /* Darker red on hover */
+    transform: scale(1.05); /* Slightly enlarges the button on hover */
+}
+
+.delete-button:active {
+    background-color: #bd2130; /* Even darker red on click */
+}
+
 /* Create blog page */
 form {
-    background-color: #fff;
+    background-color: #fff; 
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
