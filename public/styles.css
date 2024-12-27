@@ -66,6 +66,29 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.title {
+    font-size: 22px;
+    color: #333;
+    margin-top: 50px;
+}
+
+.description {
+    font-size: 16px;
+    color: #666;
+    margin: 15px 0px;
+    line-height: 1.6;
+}
+
+.read-more {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.read-more:hover {
+    color: #0056b3;
+}
 
 
 /* About Us Page */
@@ -88,7 +111,7 @@ body {
     color: #fff;
 }
 
-.navbar .title a {
+.navbar .navbar-title a {
     font-size: 24px;
     color: #fff;
     text-decoration: none;
@@ -110,7 +133,7 @@ body {
     transition: color 0.3s;
 }
 
-.navbar ul li a:hover, .navbar .title a:hover {
+.navbar ul li a:hover, .navbar .navbar-title a:hover {
     color: #00bcd4;
 }
 
