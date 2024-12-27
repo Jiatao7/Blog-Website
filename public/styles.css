@@ -9,12 +9,12 @@ body {
     background-color: #f9f9f9;
 }
 
-.content.recent-posts {
+.content {
     margin: 40px;
     padding: 20px;
 }
 
-.content.recent-posts h2 {
+.content h2 {
     font-size: 28px;
     margin-bottom: 30px;
     color: #333;
@@ -33,19 +33,19 @@ body {
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
-    width: 350px; /* Increased width */
+    width: 350px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .post h3 {
-    font-size: 22px; /* Slightly larger font size */
+    font-size: 22px;
     color: #333;
     margin-bottom: 15px;
 }
 
 .post p {
-    font-size: 18px; /* Slightly larger description text */
+    font-size: 18px; 
     color: #666;
     margin-bottom: 20px;
 }
@@ -66,6 +66,16 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+
+/* About Us Page */
+.content.about-us p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
 
 /* Navbar styles */
 .navbar {
