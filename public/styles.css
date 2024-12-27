@@ -174,7 +174,7 @@ form button:hover {
 .navbar ul {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 28px;
     margin: 0;
     padding: 0;
 }
@@ -182,7 +182,7 @@ form button:hover {
 .navbar ul li a {
     text-decoration: none;
     color: #fff;
-    font-size: 16px;
+    font-size: 18px;
     transition: color 0.3s;
 }
 

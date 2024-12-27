@@ -17,6 +17,7 @@ mongoose.connect(dbURI)
 
 //Middleware
 app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true }));
 app.use((req, res, next) => {
     console.log(req.url)
     next()
@@ -43,16 +44,25 @@ app.get("/create", (req, res) => {
     })
     
     blog.save()
-    .then(result => {
-        res.send(result);
-    })
-    .catch(err => {
-        console.log(err);
-    });
+        .then(result => {
+            res.send(result);
+        })
+        .catch(err => {
+            console.log(err);
+        });
     */
 })
 
 app.get("/about", (req, res) => {
     res.render('about')
+})
+
+app.post("/blogs", (req, res) => {
+    const newBlog = new Blog(req.body)
+    newBlog.save()
+        .then(result => {
+            console.log(result)
+            res.redirect("/blogs")
+        })
 })
 
