@@ -34,3 +34,8 @@ app.get("/about", (req, res) => {
 })
 
 app.use("/blogs", blogRoutes)
+
+//404 page
+app.use((req, res) => {
+    res.render('404')
+})
