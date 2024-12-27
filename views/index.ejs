@@ -3,10 +3,26 @@
 <%- include("./partials/head") %>
 <body>
     <%- include("./partials/navbar") %>
-    <div class="blogs content">
-        <h2>All Blogs</h2>
-        <p>There are no blogs to display.</p>
-    </div>
+    <section class="content recent-posts">
+        <h2>Recent Posts</h2>
+        <div class="posts">
+            <article class="post">
+                <h3>Post Title 1</h3>
+                <p>A short description of the blog post goes here...</p>
+                <a href="/post1">Read more</a>
+            </article>
+            <article class="post">
+                <h3>Post Title 2</h3>
+                <p>A short description of the blog post goes here...</p>
+                <a href="/post2">Read more</a>
+            </article>
+            <article class="post">
+                <h3>Post Title 3</h3>
+                <p>A short description of the blog post goes here...</p>
+                <a href="/post3">Read more</a>
+            </article>
+        </div>
+    </section>
     <%- include("./partials/footer") %>
 </body>
 </html>
