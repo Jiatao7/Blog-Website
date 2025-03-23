@@ -1,6 +1,7 @@
 //Modules
 const express = require("express")
 const mongoose = require('mongoose');
+const path = require('path');
 const Blog = require('./models/blog')
 const blogRoutes = require('./routes/blogRoutes');
 require('dotenv').config()
@@ -8,6 +9,7 @@ require('dotenv').config()
 //Initialize app
 const app = express()
 app.set('view engine', 'ejs')
+app.set('views', path.join(__dirname, 'views'));
 
 //Connect to MongoDB
 const dbURI = process.env.dbURI;
