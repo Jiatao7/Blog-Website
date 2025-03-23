@@ -1,4 +1,11 @@
 {
+  "name": "tech-blog",
+  "version": "1.0.0",
+  "description": "A tech blog built with Node.js and Express.js",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
   "dependencies": {
     "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
