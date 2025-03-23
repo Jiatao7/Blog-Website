@@ -19,7 +19,7 @@ mongoose.connect(dbURI)
   .catch(err => console.log(err));
 
 //Middleware
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use((req, res, next) => {
     next()

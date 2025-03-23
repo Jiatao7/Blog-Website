@@ -2,6 +2,7 @@ const express = require('express');
 const Blog = require('../models/blog');
 
 const all_blogs = (req, res) => {
+    console.log("Get all blogs")
     Blog.find().sort({createdAt: -1})
         .then(result => res.render('blogs', {blogs: result}))
 }
